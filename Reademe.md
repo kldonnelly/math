@@ -141,13 +141,16 @@ Modern symbolic algebra systems use a combination of the above:
 
 ```python
 import numpy as np
-
+import time
 # Example quintic polynomial: x^5 - 3x^4 + 2x^3 + x^2 - x + 1
 coefficients = [1, -3, 2, 1, -1, 1]
-
+start_time = time.time()
 # Find roots
 roots = np.roots(coefficients)
+end_time = time.time()
+execution_time = end_time - start_time
 print(roots)
+print("Execution Time:", execution_time, "seconds")
 ```
 
 ---
